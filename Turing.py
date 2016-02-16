@@ -47,8 +47,8 @@ class TuringMachine(object):
     def show_tape(self):
         print('#'*20)
         print("State: " + str(self.__current_state))
-        print("Tape: " + str(self.__tape))
-        print("Head: ", str(self.__head_position))
+        print("Tape: "  + str(self.__tape))
+        print("Head: "  + str(self.__head_position))
         return True
     
     def step(self):
