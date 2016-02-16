@@ -19,7 +19,7 @@ class Tape(object):
         if index in self.__tape:
             return self.__tape[index]
         else:
-            return blank_symbol
+            return " "
 
     def __setitem__(self, pos, char):
         self.__tape[pos] = char 
