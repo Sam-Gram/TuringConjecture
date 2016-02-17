@@ -22,7 +22,10 @@ class Tape(object):
             return " "
 
     def __setitem__(self, pos, char):
-        self.__tape[pos] = char 
+        # if pos == len(self.__tape):
+        #     self.__tape[pos+1] = " "
+        # print("DEBUG pos=" + str(pos) + " char=" + char)
+        self.__tape[pos] = char
 
         
 class TuringMachine(object):
@@ -56,6 +59,7 @@ class TuringMachine(object):
         x = (self.__current_state, char_under_head)
         if x in self.__transition_function:
             y = self.__transition_function[x]
+            # print("DEBUG: " + str(y))
             self.__tape[self.__head_position] = y[1]
             if y[2] == "R":
                  self.__head_position += 1
