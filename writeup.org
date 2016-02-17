@@ -1,0 +1,39 @@
+#+TITLE: Sharpness on the Sides of Infinite Tape
+#+LaTeX_CLASS: article
+#+OPTIONS: toc:nil
+#+AUTHOR: Sam Graham and Jacob Casperson 
+
+
+* Introduction
+Have you ever looked at a gleaming new car? While looking at it, did you consider how far man has come to produce such a feat?
+There have been many iterations from the first humble blacksmith to produce that vehicles. Think of it, first forging a hammer,
+and then using that to make an anvil, then using that hammer and anvil to make other tools, and on and on until you have something like a Lexus?
+Computers have an original blacksmith as well, Alan Turing. 
+He invented the Turing Machine, a mathematical model upon which sits all the possibilities of your Apple products, Amazon.com, all Raspberry Pis and www.byui.edu.
+The purpose of this paper is to take our proverbial Lexus, in this case our laptops, and dump a forge in the back seat to see what we could come up with.
+Surprisingly, we actually produced cool stuff in this forge, a tool for the 3x+1 conjecture.
+
+* We take Collatz to the Blacksmith
+In 1937, a German by the name of Lothar Collatz came up with a rather unprofound sounding problem. 
+If we take some positive integer x and multiply it by three and add one when it is odd and divide it by two when it is even, we will eventually end up at one.
+Although it sounds positively easy to prove, it has not been the case.
+However, it is provably easy to perform in any given case. 
+This is what the point of our forge is, to take a number (in binary form, we don't want to get too far away from the basics) and follow the pattern.
+We ripped a Turing machine implementation in Python off of the internet (http://www.python-course.eu/turing_machine.php), and after ridding it of bugs, redesigning it, 
+and implementing new features, we were ready to go.
+What follows is the states we used to procure this 3x+1 magic. 
+
+#+LaTeX: \pagebreak
+* Ye Olde Code
+Our Pythonic State code:
+#+INCLUDE: "States.py" src Python
+
+It has been said that looking at a Turing machine doesn't really give you any idea what it does.
+That also should apply to this case as well. Especially considering we smashed together the 3x+1 part, in binary.
+In short, it is a miracle that it works. It also becomes plain why people do not build their cars at a blacksmiths.
+
+* Conclusion
+Although the towering Baklava of abstraction we see today in modern programming languages is fast, smooth and efficient, it is sometimes good to go back to our roots.
+Perhaps this is because we get to see if we would survive in such an uncivilized age. When Turing first postulated his machines there was no operating system, no internet, and indeed Brother Neff, no emacs.
+There was just a few machines at the time, the first building blocks of the computer age we live in. We owe a great debt to these theoritical buildling blocks of computer science, 
+and we have refreshed our appreciation for them. Still, we will appreciate getting back into our respective Lexuses.
