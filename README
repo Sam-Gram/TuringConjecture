@@ -1,2 +1,6 @@
+# Turing Conjecture
+---
 I got a start on this code from:
 http://www.python-course.eu/turing_machine.php
+
+This is a Turing Machine Emulator. The turing machine encoded looks at the 3x+1 conjecture.
